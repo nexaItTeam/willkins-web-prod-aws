@@ -1,0 +1,90 @@
+.check-btn {
+    color: #000;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+.btn_check {
+    input {
+        display: none;
+    }
+
+    i {
+        width: 14px;
+        text-align: left;
+    }
+
+    input:checked+label {
+        color: #ffffff;
+        background-color: #000;
+        border-color: #000;
+        -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+
+        i:before {
+            content: "\f046";
+        }
+    }
+}
+
+.popup_content {
+    // padding: 50px;
+    display: flex;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 0 7px rgba(0,0,0,0.1);
+}
+.inner-form {
+    position: relative;
+    padding: 45px 45px;
+}
+.heading_s4 {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    color: #000;
+    box-shadow: none;
+    height: 50px;
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+}
+.popup_content label {
+    color: #000;
+} 
+.btn_check i {
+    color: #ef4138;
+    padding-right: 27px;
+}
+.ad-img::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.2;
+}
+ .offer-content {
+    background-image: url("../../../assets/images/add-listing-bg-1.jpg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: rgba(255, 255, 255, 0.4);
+    min-height: 460px;
+    display: flex;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 40%;
+}
+.close {
+    position: absolute;
+    right: 20px;
+    top: 9px;
+    font-size: 20px;
+}
+::ng-deep .cdk-overlay-pane{
+    width: 70%;
+}

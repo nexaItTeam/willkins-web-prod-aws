@@ -1,0 +1,33 @@
+.mdc-dialog__title::before{
+    height: 0;
+    display: block;
+    font-size: 12px;
+}
+.mat-mdc-dialog-title {
+    border-bottom: 1px solid #ddd;
+    padding: 0;
+}
+.mat-title {
+    padding: 15px 20px;
+}
+.mat-title h5 {
+    margin-bottom: 0;
+}
+.mat-mdc-dialog-content {
+    max-height: 100%;
+}
+.mat-footer {
+    border-top: 1px solid #ddd;
+    justify-content: center;
+    display: flex;
+}
+button.btn.btn-cancel {
+    background: #ec0203;
+    color: #fff;
+    box-shadow: none!important;
+}
+.btn-primary {
+    background-color: #2196F3!important;
+    color: #fff!important;
+    box-shadow: none!important;
+}

@@ -1,0 +1,141 @@
+<app-app-loader></app-app-loader>
+
+<section class="section-profile-cover section-shaped my-0">
+  <div class="inner-section">
+    <img  style='width: 100%; height: auto;'  src="assets/images/bg/contact.png" alt="">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="heading-main-section">
+          <h1 class="text-white">Why <span style="color: red;">Invest</span> <span class="theme-color"> with Us?</span></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <h2 class="h4 theme-color font-weight-bold mb-4"></h2>
+    <div class="row align-items-center">
+      <div class="col-lg-4">
+        <!-- Tabs with icons -->
+        <div class="custom-tab-content">
+          <ul ngbNav #nav="ngbNav" [(activeId)]="active1" class="tablist" type="pills">
+            <li class="nav-item" [ngbNavItem]="1">
+              <a class="nav-link" ngbNavLink><i class="ni ni-cloud-upload-96 mr-2"></i> Prime Locations, Exceptional Value: <br>
+               
+                <span class="nav-arrow"></span>
+              </a>
+
+              <ng-template ngbNavContent>
+                <div class="tab-content property-img-content">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                      <img src="../../../../../assets/images/property/prime Location.jpg" alt="">
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                      <p class="description">At Wellkins Capital, we understand the value of location. That&#39;s why our properties are strategically
+                        situated in prime areas, ranging from bustling urban centers to emerging markets with promising growth
+                        prospects. These locations not only offer convenience and accessibility but also hold the key to
+                        remarkable value appreciation over time.</p>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </li>
+            <li class="nav-item" [ngbNavItem]="2">
+              <a class="nav-link" ngbNavLink> 
+                Visionary Projects, Promising Future:
+                <span class="nav-arrow"></span>
+              </a>
+              <ng-template ngbNavContent>
+                <div class="tab-content property-img-content">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                      <img src="../../../../../assets/images/property/Visionary Projects.jpg" alt="">
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                      <p class="description">Investing with Wellkins Capital means becoming part of visionary projects that shape the landscape of
+                        tomorrow. Our ventures span across various industries, from real estate to technology and sustainable
+                        development. Each project is driven by a vision of progress and innovation, offering investors the
+                        potential to reap the rewards of pioneering ventures that transcend conventional investment models.</p>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </li>
+            <li class="nav-item" [ngbNavItem]="3">
+              <a class="nav-link" ngbNavLink>
+                <i class="ni ni-calendar-grid-58 mr-2"></i> Your Journey to Prosperity:
+                <br />
+               
+                <span class="nav-arrow"></span>
+              </a>
+              <ng-template ngbNavContent>
+                <div class="tab-content">
+                  <div class="tab-content property-img-content">
+                    <div class="row">
+                      <div class="col-lg-6 col-md-12">
+                        <img src="../../../../../assets/images/property/your journey prosperity.jpg" alt="">
+                      </div>
+                      <div class="col-lg-6 col-md-12">
+                        <p class="description" style="color: black;">At Wellkins Capital, we believe that every investor deserves a journey to prosperity. Whether you&#39;re an
+                          experienced investor seeking diversification or a newcomer looking for promising opportunities, our
+                          properties cater to various needs and aspirations. Embrace the future of finance with Wellkins Capital,
+                          and together, we&#39;ll unlock the endless possibilities that lie ahead.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="col-lg-8 img-property-content">
+        <div [ngbNavOutlet]="nav" class="custom-tab-content"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-contact p-3">
+      <div class="row justify-content-center">
+        <div class="col-lg-11 col-md-12">
+          <div style="color:white;font-size: 16px;">
+            <p> At Wellkins Capital, we take great pride in our meticulous selection process for investment projects. We
+              leverage our expertise and market insights to choose projects wisely, ensuring that each opportunity is
+              primed for success and offers great potential for value appreciation and attractive returns. As we move
+              forward, our commitment to delivering exceptional investment opportunities remains unwavering. We
+              are constantly scouting for new ventures that align with our vision of disruptive growth and sustainable
+              impact. By investing with Wellkins Capital, you can be confident that all future opportunities will be
+              carefully curated, presenting you with a diverse portfolio that holds the promise of not just good
+              returns, but outstanding financial prosperity. Your journey with Wellkins Capital is a journey of mutual
+              growth and success, where your investments pave the way for a brighter future for you and the
+              communities we serve.</p>
+          </div>
+          <div class="list-invet">
+            <ul>
+              <li><i class="fa-solid fa-circle-check me-2"></i> Experienced fund manager</li>
+              <li><i class="fa-solid fa-circle-check me-2"></i> Premium fixed income returns</li>
+              <li><i class="fa-solid fa-circle-check me-2"></i> Investments secured by mortgages over Australian real
+                estate</li>
+              <li><i class="fa-solid fa-circle-check me-2"></i> Regular income distributions</li>
+              <li><i class="fa-solid fa-circle-check me-2"></i> Range of investment terms from 3 months up to 2 years
+              </li>
+              <li><i class="fa-solid fa-circle-check me-2"></i> Dedicated Relationship Manager</li>
+              <li><i class="fa-solid fa-circle-check me-2"></i> No cost or fees to invest*</li>
+              <li><i class="fa-solid fa-circle-check me-2"></i> Low correlation to other asset returns</li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

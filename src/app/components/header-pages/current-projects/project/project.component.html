@@ -1,0 +1,79 @@
+ 
+
+<app-app-loader></app-app-loader>
+<section class="section-profile-cover section-shaped my-0">
+  <div class="inner-section">
+    <img style=' width: 100%; height: auto;'  src="assets/images/bg/current-project-image.png" alt="">
+   <div class="container">
+    <div class="row justify-content-center">
+        <div class="heading-main-section">
+            <h1>Current <span class="theme-color"> Projects</span></h1>
+          </div>
+    </div>
+   </div>
+  </div>
+</section>
+<section class="section property-slider-wrap pt-100 pb-75">
+    <div class="container">
+      <div class="row row justify-content-center">
+        <div class="col-xl-8">
+            <div class="section-title style1 text-center mb-5">
+              
+                <p style="font-size:16px">We strive to empower investors with valuable information, actionable insights, and expert
+                    analysis to
+                    navigate the ever-evolving landscape of investment opportunities. </p>
+            </div>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="1200" *ngFor="let item of property">
+                <div class="property-card style3 h_card">
+                <mat-card class="example-card" >
+                    <mat-card-header>
+                     <h4 class="mat-custom-title" title="{{item.property_name}}"> <mat-card-title>{{item.property_name}}</mat-card-title></h4>
+                     <div   [ngClass]="item.status=='Trending' ? 'ribbon  ribbon--red': item.status =='Closed' ? 'ribbon  ribbon--blue' : item.status =='Upcoming' ? 'ribbon ribbon--darkblue' : 'ribbon ribbon--yellow' ">{{item.status}}</div>
+                    </mat-card-header> 
+                       <!--  <div class="property-img border-radius-0">
+                            <img src="../../../assets/images/property/1.jpg" alt="Image">
+                           
+                        </div> -->
+                       
+                    <ng-container *ngFor="let object of propertyImage">
+                      <ng-template [ngIf]="object.prop_id  == item.id">
+                      <div class=" property-card style3 h_img">
+                    <img (click)="onpropertyClick(item)" mat-card-image title="Click to view more images" src='https://wellkinsstorageprod.blob.core.windows.net/{{object.property_img}}' />
+                    <div class="onhover-detail">
+                      <a (click)="onpropertyClick(item)">View opportunities</a>
+                  </div>
+                      </div>
+                  </ng-template>
+                </ng-container>
+                    <mat-card-content>
+                        <ul class="list-project-detail">
+                            <!-- <li>LVR:<span > {{ item.LVR }} </span></li>
+                            <li>Returns: <span>{{ item.returns }}</span></li> -->
+                            <li>Term: <span>{{ item.term }}</span></li>
+                             <li>Value :<span>{{ item.facility }}</span></li> 
+                            <!-- <li>Facility: <span>{{ item.facility }}</span></li> -->
+                        </ul>
+                    </mat-card-content>
+                    <mat-card-footer>
+                      
+                      <button class="btn style3"
+                      
+                      mat-raised-button
+                        matTooltip="View Additional Property Details"
+                        aria-label="Example mini fab with a heart icon"
+                        (click)="onpropertyClick(item)"
+                        [disabled]="item.status =='Closed' || item.status =='Completed'"
+                      >
+                      View opportunities
+                      </button>
+                    </mat-card-footer>
+                  </mat-card>
+            </div>
+        </div>
+    </div>
+      </div>
+</section>
+<app-footer></app-footer>

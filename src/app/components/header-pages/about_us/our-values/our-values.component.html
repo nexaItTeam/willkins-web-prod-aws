@@ -1,0 +1,167 @@
+
+
+<section class="section-profile-cover section-shaped my-0">
+    <div class="inner-section"><img  style='width: 100%; height: auto;'  src="assets/images/bg/faq.jpg" alt="">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="heading-main-section text-white">
+                    <h1>About <span class="theme-color">Us</span></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="row row justify-content-center">
+            <div class="mat-custom-btn">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-4 col-md-6">
+                        <a class="btn btn-black w-100" >Our Story</a>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <a class="btn btn-black w-100" (click)="goDown1()">Our Values</a>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <a class="btn btn-black w-100" (click)="goDown2()">Our Team</a>
+                    </div>
+                </div>
+                
+                
+                
+                <div id="our_story" class="py-5">
+                    <div class="one-section">
+                        <div class="section-title style1 text-center mb-5">
+                            <h2 class="mb-3">The <span class="theme-color">Wellkins Capital</span> Story</h2>
+                            <h6 class="mb-3">Licensed Australian Retail Investor Fund Manager</h6>
+                            <p class="our-story-paragrapg">At Welkins Capital Limited, the company has an Australian Financial Services Licenced, it is a dynamic and innovative investment company. We pride ourselves on our commitment to excellence, responsible practices, and a relentless pursuit of sourcing quality investments. We believe that every investor deserves access to high-potential earning investments with security of investment monies as a priority. The fund was started for the benefit of retail investors seeking quality higher earning retail property investments. The Wellkins team has from 20 to 40 years’ experience in banking, funds management, investments and management. It is this experience and professional management that sets Wellkins Capital Limited apart.
+                            </p>
+                            <div class="my-2">
+                                <img class="img-card" src="../../../../../assets/images/about/the-wellkins-capital-story.png" alt="wellkins">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="our_value" class="mt-5" style="padding-top: 130px;">
+                    <div class="second-section">
+                        <div class="text-center">
+                            <span class="invest-btn">Our Value</span>
+                        </div>
+                        <div class="py-5">
+                            <div class="section-title style1 text-center mb-5">
+                                <p class="our-story-paragrapg">At Wellkins Capital, transparency and trust form the bedrock of our relationships with our clients. We prioritize open communication, providing comprehensive information, and regular updates to keep our investors informed. We seek innovative,
+                                    secure and quality investments. </p>
+                            </div>
+                            <div class="row gx-3 justify-content-center">
+                                <div class="col-md-4">
+                                    <div class="property-card style3 content-style">
+                                        <div class="card-body">
+        
+                                            <p class="card-text">As a member of the Wellkins Capital community, you gain access to the experience of the Wellkins investement team. We provide investment opportunities to assist your investment journey and foster growth in your personal wealth.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="property-card style3 content-style">
+                                        <div class="card-body">
+        
+                                            <p class="card-text">At Wellkins Capital, we work with you to assist you understand the investment. As a licensed entity offering a regulated financial investment, we are required to have utmost duty to investors and operate in accordance with our Australian Financial Services Licence.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="property-card style3 content-style">
+                                        <div class="card-body">
+                                            <p class="card-text">At Wellkins Capital, we conduct extensive due diligence of any property investment we issue to ensure that we assess the risks to ensure that we protect your investment monies at all times. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="our_team" class="mt-5" style="padding-top: 130px;">
+                    <div class="third-section">
+                        <div class="text-center">
+                            <span class="invest-btn">Our Team</span>
+                        </div>
+                        <div class="pt-5">
+                            <div class="row justify-content-between">
+                                <div class="col-md-4">
+                                    <div class="property-card style3">
+                                        <img class="card-img-top" src="../../../../../assets/images/jack.png"
+                                            alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title" style="text-align: center;">Jack Chembirika</h5>
+                                            <h6 class="card-title" style="text-align: center;">B.Com, Dip. Fin Serv</h6>
+                                            <h6 class="card-title text-center">Director/Responsible Manager </h6>
+                                            <p class="card-text des-centent mb-0">Mr. Chembirika was previously a manager for 17 years standing with Commonwealth Bank of Australia. Since leaving the bank he has been involved in many successful property development projects. 
+                                                In addition to his role as a responsible manager for purposes of the AFS Licence issued to Wellkins Capital Fund</p>
+                                                <p class="card-text" *ngIf="show1"> a responsible manager for purposes of the AFS Licence issued to Wellkins Capital Fund, Mr Chembirika also sits on the Investment Committee for the Fund and is involved in the marketing and promotion activities for the Company. He also has significant experience in the writing and management of mortgages and has investment experience especially in particular debt and capital raising.</p>
+
+                                                <div class="pt-2">
+                                                    <a class="btn-style3"  (click)="show1 = !show1">{{show1 == true ? 'Read Less':'Read More'}}</a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="property-card style3">
+                                        <img class="card-img-top" src="../../../../../assets/images/yelda-mam.png"
+                                            alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title" style="text-align: center;">Yelda Chembirika</h5>
+                                            <h6 class="card-title" style="text-align: center;">B.N, Dip. Fin Serv</h6>
+                                            
+                                            <h6 class="card-title" style="text-align: center;">  Director</h6>
+                                            <p class="card-text des-centent mb-0">Ms. Chembirika is a holder of her own Australian Credit Licence and an experienced mortgage broker and credit specialist
+                                                . She has run her own mortgage broking business for several years and also is a director of Nexa Homes, a medium size house builder located
+                                                in Sydney. Ms. Chembirika has completed her diploma
+                                            
+                                            </p>
+                                                <p class="card-text" *ngIf="show2">
+                                                     in financial services. She has also been involved in a number of residential lot and subdivision projects. In addition to her role as a director, Ms. Chembirka will sit on the Investment Committee.</p>
+                                                <div class="pt-2">
+                                                    <a class="btn-style3"  (click)="show2 = !show2">{{show2 == true ? 'Read Less':'Read More'}}</a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="property-card style3">
+                                        <img class="card-img-top" src="../../../../../assets/images/dr-pasqule.png"
+                                            alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title" style="text-align: center;">Dr. Pasquale Franzese</h5>
+                                            <h6 class="card-title" style="text-align: center;">B.A, B.Bus, B.Com, MBA, MCom, PhD</h6>
+                                            <h6 class="card-title" style="text-align: center;">Director/Responsible Manager/Compliance Officer</h6>
+                                            <p class="card-text des-centent mb-0">Dr. Pasquale Franzese has over 40 years experience in banking, tax effective financing, property finance, investments and management. Since 2004, Dr
+                                                Franzese has been a responsible manager for property, mortgage and
+                                                securities fund managers and credit licensing 
+                                                
+                                                </p>
+                                                <p class="card-text" *ngIf="show3" >  holders. Australian fund
+                                                    managers. Prior to this role, he has held senior management positions with
+                                                    major Australian trading and merchant banks. Dr Franzese is a recognized
+                                                    Supreme court banking expert witness and holds graduate and postgraduate
+                                                    qualifications.
+                                                    Dr Franzese is a responsible manager for the AFS licence issued to Wellkins
+                                                    Capital Limited and will act as the compliance officer for purposes of the Fund.</p>
+                                                    <div class="pt-2">
+                                                        <a class="btn-style3"  (click)="show3 = !show3">{{show3 == true ? 'Read Less':'Read More'}}</a>
+                                                    </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-footer></app-footer>

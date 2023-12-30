@@ -1,0 +1,287 @@
+<section class="section pb-0">
+    <div class="section-4">
+        <div class="container">
+            <div class="row row justify-content-center">
+                <div class="col-xl-8">
+                    <div class="section-title style1 text-center mb-5">
+                        <h2 class="mb-3">Why <span class="theme-color"> Choose Us?</span></h2>
+                        <p>Are you searching for the next big investment opportunity? Look no further than Wellkins,
+                            a company that is poised to revolutionize the investment landscape. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-between mb-5">
+                <div class="col-lg-7 mb-5 mb-lg-0">
+                    <div [ngbNavOutlet]="nav" class="custom-tab-content"></div>
+                  </div>
+                <div class="col-md-4">
+                    <div class="custom-tab-content">
+                        <ul ngbNav #nav="ngbNav" [(activeId)]="active1"  type="pills">
+                            <li [ngbNavItem]="1">
+                                <a  ngbNavLink>
+                                    <div class="d-flex feature-h">
+                                        <span class="wrap-icon me-3">
+                                            <span class="icon-home2">
+                                                <!-- <i class="fa-solid fa-house"></i> -->
+                                                <img src="../../../assets/images/icons/POTENSIAL.png" alt="potential" width="50">
+                                            </span>
+                                        </span>
+                                        <div class="feature-text">
+                                            <h3 class="heading">QUALITY OF INVESTMENTS</h3>
+                                            <p class="text-black-50">We source and select quality property investments that aim to provide higher returns yet at the same time seek to protect your investment monies.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                                
+                                <ng-template ngbNavContent>
+                                    <div class="tab-content property-img-content">
+                                        <div class="img-about dots">
+                                            <img src="../../../assets/images/about/UNTAPPED-POTENTIAL.png" alt="Image" class="img-fluid">
+                                        </div>
+                                    </div>
+                                  </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a  ngbNavLink>
+                                    <div class="d-flex feature-h">
+                                        <span class="wrap-icon me-3">
+                                            <span class="icon-person">
+                                                <!-- <i class="fa-solid fa-user"></i> -->
+                                                <img src="../../../assets/images/icons/new.png" alt="potential" width="50">
+                                            </span>
+                                        </span>
+                                        <div class="feature-text">
+                                            <h3 class="heading">EXPERIENCE OF OUR TEAM</h3>
+                                            <p class="text-black-50">The team at Wellkins Capital Limited have exceptional demonstrated experience and track record in investments, finance and management.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                                
+                                <ng-template ngbNavContent>
+                                    <div class="tab-content property-img-content">
+                                        <div class="img-about dots">
+                                            <img src="../../../assets/images/about/INNOVATIVE APPROACH.png" alt="Image" class="img-fluid">
+                                        </div>
+                                    </div>
+                                  </ng-template>
+                            </li>
+                            <li [ngbNavItem]="3">
+                                <a  ngbNavLink>
+                                    <div class="d-flex feature-h">
+                                        <span class="wrap-icon me-3">
+                                            <span class="icon-security">
+                                                <!-- <i class="fa-solid fa-shield-halved"></i> -->
+                                                <img src="../../../assets/images/icons/atom.png" alt="potential" width="50">
+                                            </span>
+                                        </span>
+                                        <div class="feature-text">
+                                            <h3 class="heading">PROFESSIONAL MANAGEMENT</h3>
+                                            <p class="text-black-50">Professional 'hands on' management approach in how we
+                                                deal with investors and manage your investment.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                                
+                                <ng-template ngbNavContent>
+                                    <div class="tab-content property-img-content">
+                                        <div class="img-about dots">
+                                            <img src="../../../assets/images/about/DYNAMIC-AND-AGILE.png" alt="Image" class="img-fluid">
+                                        </div>
+                                    </div>
+                                  </ng-template>
+                            </li>
+                          
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="property-wrap mb-40">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-8">
+                <div class="section-title style1 text-center mb-40">
+                    <h2>The <span class="theme-color">Wellkins Capital Fund</span></h2>
+                    <p>Projects identified for higher returns but at the same time protection of your investment monies? Let us introduce to you our quality property investments. Please register your interest for details of current and future investments. See below on what is currently on offer. </p>
+                </div>
+            </div>
+        </div>
+        <div class="property-slider-wrap">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="1200"
+                        data-aos-delay="200">
+                        <div class="property-card style3">
+                            <div class="property-header">
+                                <span class="ribbon ribbon--red property-ribbon status-upcoming" >Trending</span>
+                            </div>
+                            <div class="property-img border-radius-0 himg">
+                                <img src="../../../assets/images/property/2.jpg" alt="Image">
+                                <div class="onhover-detail">
+                                    <a (click)="onpropertyClick('93')">View Details</a>
+                                </div>
+                            </div>
+                            <div class="property-info p-0">
+                                <h3 class="color-heading mb-0"><a>Land Banking - BRADFIELD NSW</a></h3>
+                                <ul class="list-style mat-list">
+                                <li>Term: <span class="text-end">5 Years</span></li>
+                                    <li>Total Value :<span class="text-end">$10,000,000</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="1200"
+                        data-aos-delay="200">
+                        <div class="property-card style3">
+                            <div class="property-header">
+                                <span class="ribbon ribbon--darkblue property-ribbon status-upcoming">Upcoming</span>
+                            </div>
+                            <div class="property-img border-radius-0 himg">
+                                <img src="../../../assets/images/property/3.jpg" alt="Image">
+                                <div class="onhover-detail">
+                                    <a (click)="onpropertyClick('96')">View Details</a>
+                                </div>
+                            </div>
+                            
+                            <div class="property-info p-0">
+                                <h3 class="color-heading mb-0"><a>Childe Care Centre - BOX HILL NSW
+                                </a></h3>
+                                    <ul class="list-style mat-list">
+                                        <li>Term: <span class="text-end">5 Years</span></li>
+                                        <li>Total Value :<span class="text-end">$6,500,000</span></li>
+                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="1200"
+                        data-aos-delay="200">
+                        <div class="property-card style3">
+                            <div class="property-header">
+                                <span class="ribbon ribbon--darkblue property-ribbon status-upcoming">Upcoming</span>
+                            </div>
+                            <div class="property-img border-radius-0 himg">
+                                <img src="../../../assets/images/property/1.jpg" alt="Image">
+                                <div class="onhover-detail">
+                                    <a (click)="onpropertyClick('95')">View Details</a>
+                                </div>
+                            </div>
+                            <div class="property-info p-0">
+                                <h3 class="color-heading mb-0"><a>Apartment - BLACKTOWN NSW</a></h3>
+                                <ul class="list-style mat-list">
+                                    <li>Term: <span class="text-end">5 Years</span></li>
+                                    <li>Total Value :<span class="text-end">$30,000,000</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="mb-40">
+    <div class="video-wrap video-bg-1 style2 bg-f ptb-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-8">
+                    <div class="video-content">
+                        <div class="content-title">
+                            <h2>Unlock the Potential, Power Your Future with <span class="theme-color">Wellkins Capital Fund</span></h2>
+                            <div class="py-3">
+                                <a (click)="onAppClick()"class="me-3" ><img src="assets/images/gplay.png" alt="google play"
+                                        width="170"></a>
+                                <a  (click)="onAppClick()" class="me-3" ><img src="assets/images/appstore.png" alt="google play"
+                                        width="150"></a>
+                                        <div style="height: 50px;"></div>
+                                        <div *ngIf="showWarning"><p style="color: red; font-size: 25px;"> *Coming Soon</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mb-40">
+    <div class="add-listing-wrap">
+        <div class="row row justify-content-center">
+            <div class="col-xl-8">
+                <div class="section-title style1 text-center mb-5">
+                    <h2 class="mb-3">Our <span class="theme-color">Latest News</span></h2>
+                    <p>Visit our site frequently to obtain details of our investments and news on Wellkins Capital Limited and its investment offerings, news on the fund and how we can assist you invest in quality property investments. </p>
+                </div>
+            </div>
+        </div>
+        <div class="property-slider-wrap">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="1200"
+                        data-aos-delay="200">
+                        <div class="property-card style3">
+                            <div >
+                                <img style=' width: 100%; object-fit: cover' src="../../../assets/images/images.jpeg" alt="Image">
+                            </div>
+                            <div class="property-info h-info-content">
+                                <div class="property-status-wrap">
+                                    <span class="property-state"><i class="flaticon-home"></i>June 18, 2023</span>
+                                    
+                                </div>
+                                <h3><a href="/News-Insights">Navigating the Booming Australian Investment Landscape with Wellkins Capital</a></h3>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="1200"
+                        data-aos-delay="300">
+                        <div class="property-card style3">
+                            <div >
+                                <img style=' width: 100%; object-fit: cover' src="../../../assets/images/invest.jpeg" alt="Image">
+                            </div>
+                            <div class="property-info h-info-content">
+                                <div class="property-status-wrap">
+                                    <span class="property-state"><i class="flaticon-home"></i>June 18, 2023</span>
+                                    
+                                </div>
+                                <h3><a href="/News-Insights">Real Estate investment with Wellkins Capital  as a game-changer                                      </a></h3>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="1200"
+                        data-aos-delay="400">
+                        <div class="property-card style3">
+                            <div >
+                                <img style=' width: 100%; object-fit: cover' src="../../../assets/images/land.jpeg" alt="Image">
+                            </div>
+                            <div class="property-info h-info-content">
+                                <div class="property-status-wrap">
+                                    <span class="property-state"><i class="flaticon-home"></i>June 27, 2023</span>
+                                    
+                                </div>
+                                <h3><a href="/News-Insights">Recognize the potential of real estate  with Wellkins Capital</a></h3>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<app-footer></app-footer>

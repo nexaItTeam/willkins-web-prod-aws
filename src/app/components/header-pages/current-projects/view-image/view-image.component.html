@@ -1,0 +1,163 @@
+<app-app-loader></app-app-loader>
+<section class="section-profile-cover section-shaped my-0">
+  <div class="inner-section">
+    <img src="assets/images/property/project.jpg" alt="">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="heading-main-section">
+          <h1>Projects <span class="theme-color"> Details </span></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-xl-12">
+          <div class="section-title style1 text-center mb-40">
+              <h2> {{propertyInfo[0].property_name}}</h2>
+              <h4 class="my-3 text-center">{{propertyInfo[0].property_address}}</h4>
+          </div>
+          <div class="text-center">
+            <p style="text-align: center; color:#385548;font-size: 16px;">{{propertyInfo[0].desc}}
+            </p>
+           
+          </div>
+      </div>
+  </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+  <div class="details">
+    <mat-card>
+      <mat-card-header>
+        <h3> <mat-card-title></mat-card-title></h3>
+       
+      </mat-card-header>
+      <mdb-carousel [animation]="'slide'" [interval]="0">
+        <mdb-carousel-item *ngFor="let slide of galleryImage ">
+          <img style=' width: 100%; object-fit: cover' class="d-block w-100"
+            src="https://wellkinsstorageprod.blob.core.windows.net/{{slide.property_img}}" alt="..." />
+        </mdb-carousel-item>
+      </mdb-carousel>
+    </mat-card>
+  </div>
+  <div style="text-align:right;padding-top: 5px;">
+    <a  *ngIf="propertyInfo[0].brocher != null" class="btn style2" type="button" href="https://wellkinsstorageprod.blob.core.windows.net/brochure/{{propertyInfo[0].brocher}}" target="_blank" >Download Full
+      
+      
+      Brochure</a>
+  </div>
+</div>
+</section>
+
+<section class="section" *ngIf="propertyInfo[0].status !='Closed' && propertyInfo[0].status !='Completed'">
+  <div id ="enquire" class="container">
+    <div class="section-contact">
+      <div class="row align-items-center">
+        <div class="col-lg-12 col-md-12 p-3">
+            <div class="contact-heading">
+                <h2 class="theme-color text-center">Express your Interest</h2>
+            </div>
+        </div>
+        <form [formGroup]="enquiryForm">
+          <div class="contact-form px-5 mb-5">
+            <div class="row">
+              <div class="col-lg-6 col-md-12">
+                <div class="lab-input">
+                  <label for="">Full Name</label>
+                  <input type="text" class="form-control" placeholder="Please enter your full legal name"
+                    formControlName="full_name">
+                  <mat-error *ngIf="enquiryForm.get('full_name')!.hasError('required') && isTouch"> First Name is
+                    required
+                  </mat-error>
+                </div>
+              </div>
+              
+              <div class="col-lg-6 col-md-12">
+                <div class="lab-input">
+                  <label for="">Email</label>
+                  <input type="text" class="form-control" placeholder="Please enter your email"
+                    formControlName="user_email">
+                  <mat-error *ngIf="enquiryForm.get('user_email')!.hasError('required') && isTouch"> Email is required
+                  </mat-error>
+                  <mat-error *ngIf="enquiryForm. get('user_email')!.hasError('email')"> Email must be a valid email
+                    address
+                  </mat-error>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-12">
+                <div class="lab-input">
+                  <label for="">Contact No.</label>
+                  <input type="number" class="form-control" placeholder="Please enter your contact no"
+                    formControlName="contact_no">
+                  <mat-error *ngIf="enquiryForm. get('contact_no')!.hasError('required') && isTouch"> Please Enter
+                    Contact No. </mat-error>
+                </div>
+              </div>
+
+             
+              <div class="col-lg-6 col-md-12">
+                <div class="lab-input">
+                  <label for="">Investment Amount</label>
+                  <input type="text"
+                  placeholder="Pick one amount range Ex. $92,000 - $150,000"
+                  class="form-control"
+                  formControlName="invest"
+                  [matAutocomplete]="auto">
+           <mat-autocomplete #auto="matAutocomplete">
+             <mat-option *ngFor="let option of userAmountList " [value]="option.Amount">
+               {{option.Amount}}
+             </mat-option>
+           </mat-autocomplete>
+                  <mat-error *ngIf="enquiryForm. get('invest')!.hasError('required') && isTouch"> Please Enter Investment Amount
+                  </mat-error>
+                </div>
+              </div>
+              
+              <div class="col-lg-6 col-md-12">
+                <div class="lab-input">
+                  <label for="">Post Code</label>
+                  <input type="text" class="form-control" placeholder="Please enter your post code"
+                    formControlName="location">
+                  <mat-error *ngIf="enquiryForm. get('location')!.hasError('required') && isTouch"> Please Enter Post Code
+                  </mat-error>
+                </div>
+              </div>
+
+              
+
+              <div class="col-lg-6 col-md-12">
+                <div class="lab-input">
+                  <label for="">Comments/Question</label>
+                 
+                    <input class="form-control" formControlName="description">
+                    
+               
+                </div>
+              </div>
+
+              
+              <div class="col-lg-12 col-md-12 mt-3">
+                <div class="submit text-center">
+                  <button class="btn style2" type="button" style="margin-right: 16px" (click)="onFormSubmit()">Send Enquiry</button>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<app-footer></app-footer>
