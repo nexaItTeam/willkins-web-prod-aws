@@ -90,5 +90,50 @@
     </div>
       </div>
 </section>
+<!-- <section class="section property-slider-wrap pt-100 pb-75">
+    <div class="container">
+     
+        <div class="row">
+            <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="1200" *ngFor="let item of dataSource">
+                <div class="property-card style3 h_card">
+                <mat-card class="example-card" >
+                    <mat-card-header>
+                     <h4  title="{{item.blog_title}}"> <mat-card-title style="text-align: center;">{{item.blog_title}}</mat-card-title></h4>
+                    
+                    </mat-card-header> 
+                     
+                      <div [innerHTML]="item.URL" class=" property-card style3 h_img">
+                    
+                    <div class="onhover-detail">
+                      <a (click)="onpropertyClick(item)">View Blog</a>
+                  </div>
+                      </div>
+                 
+               
+                    <mat-card-content>
+                        <div [innerHTML]="item.blog_body">
+
+                        </div>
+                    </mat-card-content>
+                    <mat-card-footer>
+                      
+                      <button class="btn style3"
+                      
+                      mat-raised-button
+                       
+                        aria-label="Example mini fab with a heart icon"
+                        (click)="onpropertyClick(item)"
+                       
+                      >
+                     Read More
+                      </button>
+                    </mat-card-footer>
+                  </mat-card>
+            </div>
+        </div>
+    </div>
+      </div>
+</section> -->
+
 <app-footer></app-footer>
 

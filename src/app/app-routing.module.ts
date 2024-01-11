@@ -15,6 +15,7 @@ import { HomeComponent } from './components/home/home.component';
 import {ContactUsComponent} from './pages/contact-us/contact-us.component';
 import { ViewImageComponent } from './components/header-pages/current-projects/view-image/view-image.component';
 import { AdvetDialogComponent } from './components/advet-dialog/advet-dialog.component';
+import { ViewBlogComponent } from './components/view-blog/view-blog.component';
 
 /* const routes: Routes = [
   { path: '', component: OurTeamComponent },
@@ -50,6 +51,8 @@ const routes = [
 { path: 'policy', component: OurStoryComponent,  },
 { path: 'terms', component: OurTeamComponent,  },
 { path: 'view-current-project', component: ViewImageComponent,  },
+
+{ path: 'view-blog', component: ViewBlogComponent,  },
 {path: 'advertisement', component: AdvetDialogComponent}
  
 ];

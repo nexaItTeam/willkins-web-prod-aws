@@ -33,6 +33,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { InvestFAQComponent } from './header-pages/investor/invest-faq/invest-faq.component';
 import { ContactUsComponent } from '../pages/contact-us/contact-us.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { ViewBlogComponent } from './view-blog/view-blog.component';
 @NgModule({
   declarations: [
     AdvetDialogComponent,
@@ -53,7 +54,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     AddEnquiryComponent,
     ViewImageComponent,
     AppLoaderComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    ViewBlogComponent
   ],
   imports: [
 
