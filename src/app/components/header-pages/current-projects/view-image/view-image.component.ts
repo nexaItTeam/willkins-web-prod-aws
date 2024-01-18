@@ -101,6 +101,7 @@ var result =   this._commonService
 }
 
 public getSlideImages(){
+ 
   this.MapImage=[]
   this.galleryImage=[]
   this.divisionPlan=[]
@@ -111,6 +112,7 @@ this.galleryImage.push(element)
       this.MapImage.push(element)
     }
     else {
+      this.galleryImage.push(element)
    this.divisionPlan.push(element)
     }
   });
