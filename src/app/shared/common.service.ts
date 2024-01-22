@@ -29,4 +29,8 @@ export class CommonService {
   getBlogData() {
     return this._http.post(environment.BLOG_ENDPOINT + 'getAll', []);
   }
+  //get total investment
+  getTotalInvestment(body:any){
+    return this._http.post(environment.PROPERTY_ENDPOINT + 'totalInvestment',body);
+  }
 }

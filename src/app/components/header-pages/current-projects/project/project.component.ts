@@ -89,16 +89,8 @@ export class ProjectComponent implements OnInit {
     });
   }
   onpropertyClick(data: any) {
-debugger
-    /* const dialogRef = this._dialog.open(ViewImageComponent,{data,});
-    
-    dialogRef.afterClosed().subscribe({
-      next: (val: any) => {
-        if (val) {
 
-        }
-      },
-    }); */
+    
    
     this.route.navigate(['view-current-project',{ queryParams:data.id}])
   }
