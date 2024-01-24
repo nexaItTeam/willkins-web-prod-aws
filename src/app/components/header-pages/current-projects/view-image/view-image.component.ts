@@ -33,10 +33,10 @@ export class ViewImageComponent implements OnInit {
   public userAmountList = [
 
     {
-      Amount: "$0 - $92,000",
+      Amount: "$0 - $100,000",
     },
     {
-      Amount: "$92,000 - $150,000",
+      Amount: "$100,000 - $150,000",
     },
     {
       Amount: "$150,000 - $200,000",
@@ -194,7 +194,7 @@ export class ViewImageComponent implements OnInit {
         this.isTouch = true
       }
     } else {
-      alert('Booking closed for current project since all shares alloted, you can invest & go through our other projects.THANK YOU');
+      alert('Booking closed for current project since all Units alloted, you can invest & go through our other projects.THANK YOU');
     }
   }
   getPropertyLists() {
