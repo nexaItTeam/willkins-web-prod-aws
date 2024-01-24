@@ -5,6 +5,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { CommonService } from 'src/app/shared/common.service';
+import { LabelSettings } from '@progress/kendo-angular-progressbar';
 
 @Component({
   selector: 'app-view-image',
@@ -22,28 +23,38 @@ export class ViewImageComponent implements OnInit {
   public isTouch: boolean = false;
   public property: any
   public totalInvestment!: number
+  public value = 50;
+
+  public label: LabelSettings = {
+    visible: true,
+    format: "percent",
+    position: "center",
+  };
   public userAmountList = [
 
     {
-      Amount: "$92,000",
+      Amount: "$0 - $92,000",
     },
     {
-      Amount: "$150,000",
+      Amount: "$92,000 - $150,000",
     },
     {
-      Amount: "$200,000",
+      Amount: "$150,000 - $200,000",
     },
     {
-      Amount: "$250,000",
+      Amount: "$200,000 - $250,000",
     },
     {
-      Amount: "$300,000",
+      Amount: "$250,000 - $300,000",
     },
     {
-      Amount: "$400,000",
+      Amount: "$300,000 - $400,000",
     },
     {
-      Amount: "$500,000",
+      Amount: "$400,000 - $500,000",
+    },
+    {
+      Amount: "$500,000 or more ",
     }
   ]
   constructor(private _fb: FormBuilder, private router: ActivatedRoute, private _commonService: CommonService, public spinner: NgxSpinnerService) {
@@ -224,7 +235,8 @@ export class ViewImageComponent implements OnInit {
     this._commonService.getTotalInvestment(body).subscribe({
       next: (res: any) => {
         this.spinner.hide()
-        this.totalInvestment = res.totalInvestment[0].total_investment
+        this.totalInvestment = res.totalInvestment[0].total_investment;
+        this.value = this.propertyInfo[0].facility / this.totalInvestment 
       },
       error: (err: any) => {
 

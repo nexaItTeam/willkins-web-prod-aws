@@ -2116,3 +2116,12 @@ h3.color-heading {
     display: none !important;
   }
 }
+.k-progress-status {
+  padding-block: 0;
+  padding-inline: 8px;
+  min-width: 10px;
+  text-align: center;
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: 1000 !important;
+}

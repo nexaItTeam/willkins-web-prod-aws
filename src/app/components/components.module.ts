@@ -34,6 +34,7 @@ import { InvestFAQComponent } from './header-pages/investor/invest-faq/invest-fa
 import { ContactUsComponent } from '../pages/contact-us/contact-us.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ViewBlogComponent } from './view-blog/view-blog.component';
+import { ProgressBarModule } from "@progress/kendo-angular-progressbar";
 @NgModule({
   declarations: [
     AdvetDialogComponent,
@@ -73,7 +74,7 @@ import { ViewBlogComponent } from './view-blog/view-blog.component';
     NgbModule,
     MatTabsModule,
     SlickCarouselModule,
-
+    ProgressBarModule
   ]
 })
 export class ComponentsModule { }

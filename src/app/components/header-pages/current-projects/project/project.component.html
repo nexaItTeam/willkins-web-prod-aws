@@ -58,7 +58,7 @@
                           <!-- <li>LVR:<span > {{ item.LVR }} </span></li>
                           <li>Returns: <span>{{ item.returns }}</span></li> -->
                           <li>Term: <span>{{ item.term }}</span></li>
-                           <li>Value :<span>{{ item.facility | currency : 'USD' }}</span></li> 
+                           <li>{{item.prop_type ==3 ? 'Loan Amount':'Value'}}:<span>{{ item.facility | currency : 'USD' }}</span></li> 
                            <li *ngIf="item.prop_type ==3">LVR: <span>{{ item.LVR }}</span></li>
                            <li *ngIf="item.prop_type ==3">Return :<span>{{ item.returns }}</span></li>
                            </ul>
