@@ -228,6 +228,7 @@ export class ViewImageComponent implements OnInit {
   }
   //et total amount of the property
   getTotalInvestmet() {
+    debugger
     this.spinner.show()
     const body = {
       "prop_id": this.propertyId
@@ -236,7 +237,13 @@ export class ViewImageComponent implements OnInit {
       next: (res: any) => {
         this.spinner.hide()
         this.totalInvestment = res.totalInvestment[0].total_investment;
-        this.value = this.propertyInfo[0].facility / this.totalInvestment 
+        const a =this.propertyInfo[0].facility
+        const b =this.totalInvestment
+        if(this.propertyInfo[0].facility < this.totalInvestment ){
+        this.value = (b/a) * 100
+        }else{
+          this.value = 100
+        }
       },
       error: (err: any) => {
 
