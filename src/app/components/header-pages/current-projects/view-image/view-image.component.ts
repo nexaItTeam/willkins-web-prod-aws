@@ -36,16 +36,10 @@ export class ViewImageComponent implements OnInit {
       Amount: "$0 - $100,000",
     },
     {
-      Amount: "$100,000 - $150,000",
+      Amount: "$100,000 - $200,000",
     },
     {
-      Amount: "$150,000 - $200,000",
-    },
-    {
-      Amount: "$200,000 - $250,000",
-    },
-    {
-      Amount: "$250,000 - $300,000",
+      Amount: "$200,000 - $300,000",
     },
     {
       Amount: "$300,000 - $400,000",
