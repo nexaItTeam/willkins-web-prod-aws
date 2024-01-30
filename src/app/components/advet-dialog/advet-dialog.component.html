@@ -75,7 +75,7 @@
                             <div class="form-group">
                                 <label for=""><i class="fa-solid fa-arrow-up-wide-short"></i> Investment
                                     Amount</label>
-                                <input type="text" placeholder="Pick one Amount Range Ex. $92,000 - $150,000"
+                                <input type="text" placeholder="Pick one Amount Range Ex. $0 - $100,000"
                                     class="form-control" formControlName="invest" [matAutocomplete]="auto">
                                 <mat-autocomplete #auto="matAutocomplete">
                                     <mat-option *ngFor="let option of userAmountList " [value]="option.Amount">

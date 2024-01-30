@@ -12,28 +12,25 @@ export class AdvetDialogComponent {
   advtForm!: FormGroup;
  public arr:any=[]
   public isTouch:boolean = false;
-  public userAmountList=[
- 
+  public userAmountList = [
+
     {
-      Amount: "$92,000",
+      Amount: "$0 - $100,000",
     },
     {
-      Amount: "$150,000",
+      Amount: "$100,000 - $200,000",
     },
     {
-      Amount: "$200,000",
+      Amount: "$200,000 - $300,000",
     },
     {
-      Amount: "$250,000",
+      Amount: "$300,000 - $400,000",
     },
     {
-      Amount: "$300,000",
+      Amount: "$400,000 - $500,000",
     },
     {
-      Amount: "$400,000",
-    },
-    {
-      Amount: "$500,000",
+      Amount: "$500,000 or more ",
     }
   ]
   constructor(private _fb: FormBuilder,  private _commonService: CommonService,public spinner:NgxSpinnerService){
