@@ -232,12 +232,18 @@ export class ViewImageComponent implements OnInit {
         this.spinner.hide()
         this.totalInvestment = res.totalInvestment[0].total_investment;
         const a =this.propertyInfo[0].facility
-        const b =this.totalInvestment
+        const b =this.totalInvestment 
+        if(b != null){
         if(this.propertyInfo[0].facility < this.totalInvestment ){
         this.value = (b/a) * 100
+        console.log("0")
         }else{
           this.value = 100
         }
+      }
+      else{
+        this.value =0
+      }
       },
       error: (err: any) => {
 
