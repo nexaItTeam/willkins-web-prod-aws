@@ -17,58 +17,75 @@
   <div class="container py-5">
     <div class="row justify-content-center">
       <div class="col-xl-12">
-          <div class="section-title style1 text-center mb-40">
-              <h2> {{propertyInfo[0].property_name}}</h2>
-              <h4 class="my-3 text-center">{{propertyInfo[0].property_address}}</h4>
-          </div>
-          <div class="text-center">
-            <p style="text-align: center; color:#385548;font-size: 16px;">{{propertyInfo[0].desc}}
-            </p>
-           
-          </div>
+        <div class="section-title style1 text-center mb-40">
+          <h2> {{propertyInfo[0].property_name}}</h2>
+          <h4 class="my-3 text-center">{{propertyInfo[0].property_address}}</h4>
+        </div>
+        <div class="text-center">
+          <p style="text-align: center; color:#385548;font-size: 16px;">{{propertyInfo[0].desc}}
+          </p>
+
+        </div>
       </div>
-  </div>
+    </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-  <div class="details">
-    <mat-card>
-      <mat-card-header>
-        <h3> <mat-card-title></mat-card-title></h3>
-       
-      </mat-card-header>
-      <mdb-carousel [animation]="'slide'" [interval]="0">
-        <mdb-carousel-item *ngFor="let slide of galleryImage ">
-          <img style=' width: 100%; object-fit: cover' class="d-block w-100"
-            src="https://wellkinsstorageprod.blob.core.windows.net/{{slide.property_img}}" alt="..." />
-        </mdb-carousel-item>
-      </mdb-carousel>
-    </mat-card>
+    <div class="details">
+      <mat-card>
+        <mat-card-header>
+          <h3> <mat-card-title></mat-card-title></h3>
+
+        </mat-card-header>
+        <mdb-carousel [animation]="'slide'" [interval]="0">
+          <mdb-carousel-item *ngFor="let slide of galleryImage ">
+            <img style=' width: 100%; object-fit: cover' class="d-block w-100"
+              src="https://wellkinsstorageprod.blob.core.windows.net/{{slide.property_img}}" alt="..." />
+          </mdb-carousel-item>
+        </mdb-carousel>
+      </mat-card>
+    </div>
+    <div style="text-align:right;padding-top: 5px;">
+      <a *ngIf="propertyInfo[0].brocher != null" class="btn style2" type="button"
+        href="https://wellkinsstorageprod.blob.core.windows.net/brochure/{{propertyInfo[0].brocher}}"
+        target="_blank">Download Full
+
+
+        Brochure</a>
+
+    </div>
   </div>
-  <div style="text-align:right;padding-top: 5px;">
-    <a  *ngIf="propertyInfo[0].brocher != null" class="btn style2" type="button" href="https://wellkinsstorageprod.blob.core.windows.net/brochure/{{propertyInfo[0].brocher}}" target="_blank" >Download Full
-      
-      
-      Brochure</a>
-    
-  </div>
-</div>
 
 </section>
-<div *ngIf='propertyInfo[0].prop_type == 3'class="container col-xl-4">
-  <h6 style="text-align:center;color:black">Units Occupied</h6>
+<div *ngIf='propertyInfo[0].prop_type == 3' class="container col-xl-4">
+  
   <kendo-progressbar [value]="value" [label]="label"></kendo-progressbar>
+  
+  
+    <div class="row d-flex align-items-baseline mb-3">
+      <div style="font-style: bold;" class="col-xl-6">
+        <b>$0</b>
+         
+      </div>
+      <div style="font-style: bold;" class="col-xl-6  text-end">
+        <b>
+        {{propertyInfo[0].facility |
+        currency : 'USD' : 'symbol' : '1.0-0'
+        }}
+      </b>
+      </div>
   </div>
+</div>
 <section class="section" *ngIf="propertyInfo[0].status !='Closed' && propertyInfo[0].status !='Completed'">
-  <div id ="enquire" class="container">
+  <div id="enquire" class="container">
     <div class="section-contact">
       <div class="row align-items-center">
         <div class="col-lg-12 col-md-12 p-3">
-            <div class="contact-heading">
-                <h2 class="theme-color text-center">Express your Interest</h2>
-            </div>
+          <div class="contact-heading">
+            <h2 class="theme-color text-center">Express your Interest</h2>
+          </div>
         </div>
         <form [formGroup]="enquiryForm">
           <div class="contact-form px-5 mb-5">
@@ -83,7 +100,7 @@
                   </mat-error>
                 </div>
               </div>
-              
+
               <div class="col-lg-6 col-md-12">
                 <div class="lab-input">
                   <label for="">Email</label>
@@ -107,52 +124,52 @@
                 </div>
               </div>
 
-             
+
               <div class="col-lg-6 col-md-12">
                 <div class="lab-input">
                   <label for="">Investment Amount</label>
-                  <input type="text"
-                  placeholder="Pick one amount range Ex. $0 - $100,000"
-                  class="form-control"
-                  formControlName="invest"
-                  [matAutocomplete]="auto">
-           <mat-autocomplete #auto="matAutocomplete">
-             <mat-option *ngFor="let option of userAmountList " [value]="option.Amount">
-               {{option.Amount}}
-             </mat-option>
-           </mat-autocomplete>
-                  <mat-error *ngIf="enquiryForm. get('invest')!.hasError('required') && isTouch"> Please Enter Investment Amount
+                  <input type="text" placeholder="Pick one amount range Ex. $0 - $100,000" class="form-control"
+                    formControlName="invest" [matAutocomplete]="auto">
+                  <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let option of userAmountList " [value]="option.Amount">
+                      {{option.Amount}}
+                    </mat-option>
+                  </mat-autocomplete>
+                  <mat-error *ngIf="enquiryForm. get('invest')!.hasError('required') && isTouch"> Please Enter
+                    Investment Amount
                   </mat-error>
                 </div>
               </div>
-              
+
               <div class="col-lg-6 col-md-12">
                 <div class="lab-input">
                   <label for="">Post Code</label>
                   <input type="text" class="form-control" placeholder="Please enter your post code"
                     formControlName="location">
-                  <mat-error *ngIf="enquiryForm. get('location')!.hasError('required') && isTouch"> Please Enter Post Code
+                  <mat-error *ngIf="enquiryForm. get('location')!.hasError('required') && isTouch"> Please Enter Post
+                    Code
                   </mat-error>
                 </div>
               </div>
 
-              
+
 
               <div class="col-lg-6 col-md-12">
                 <div class="lab-input">
                   <label for="">Comments/Question</label>
-                 
-                    <input class="form-control" formControlName="description">
-                    
-               
+
+                  <input class="form-control" formControlName="description">
+
+
                 </div>
               </div>
 
-              
+
               <div class="col-lg-12 col-md-12 mt-3">
                 <div class="submit text-center">
-                  <button class="btn style2" type="button" style="margin-right: 16px" (click)="onFormSubmit()">Send Enquiry</button>
-                  
+                  <button class="btn style2" type="button" style="margin-right: 16px" (click)="onFormSubmit()">Send
+                    Enquiry</button>
+
                 </div>
               </div>
             </div>

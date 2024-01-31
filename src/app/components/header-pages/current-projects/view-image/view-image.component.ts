@@ -146,9 +146,9 @@ export class ViewImageComponent implements OnInit {
    }
   }  */
   onFormSubmit() {
-    debugger
-    var toparse = this.propertyInfo[0].facility
-    if (this.totalInvestment < +toparse) {
+  
+   // var toparse = this.propertyInfo[0].facility
+   
       this.spinner.show()
       this.isTouch = true
       if (this.enquiryForm.valid) {
@@ -187,9 +187,9 @@ export class ViewImageComponent implements OnInit {
         this.spinner.hide()
         this.isTouch = true
       }
-    } else {
-      alert('Booking closed for current project since all Units alloted, you can invest & go through our other projects.THANK YOU');
-    }
+    // } else {
+    //   alert('Booking closed for current project since all Units alloted, you can invest & go through our other projects.THANK YOU');
+    // }
   }
   getPropertyLists() {
     this.spinner.show()
