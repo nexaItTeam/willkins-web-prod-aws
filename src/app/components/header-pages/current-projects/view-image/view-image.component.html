@@ -117,10 +117,12 @@
               <div class="col-lg-6 col-md-12">
                 <div class="lab-input">
                   <label for="">Contact No.</label>
-                  <input type="number" class="form-control" placeholder="Please enter your contact no"
+                  <input pattern="[0-9.]+" class="form-control" placeholder="Please enter your contact no"
                     formControlName="contact_no">
                   <mat-error *ngIf="enquiryForm. get('contact_no')!.hasError('required') && isTouch"> Please Enter
                     Contact No. </mat-error>
+                    <mat-error *ngIf="enquiryForm. get('contact_no')!.hasError('pattern') && isTouch">should contain
+                     only digits </mat-error>
                 </div>
               </div>
 
