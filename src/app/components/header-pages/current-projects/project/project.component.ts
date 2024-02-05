@@ -55,7 +55,7 @@ export class ProjectComponent implements OnInit {
   }
 
   getPropertyLists() {
-    debugger
+    
     this.spinner.show()
     this._commonService.getPropertyList().subscribe({
       next: (res: any) => {

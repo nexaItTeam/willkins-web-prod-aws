@@ -52,7 +52,7 @@ const routes = [
 { path: 'terms', component: OurTeamComponent,  },
 { path: 'view-current-project', component: ViewImageComponent,  },
 
-{ path: 'view-blog', component: ViewBlogComponent,  },
+{ path: 'view-blog', component: ViewBlogComponent  },
 {path: 'advertisement', component: AdvetDialogComponent}
  
 ];

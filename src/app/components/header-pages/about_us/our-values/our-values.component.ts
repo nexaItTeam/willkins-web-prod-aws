@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
 import { ViewportScroller } from "@angular/common";
+import { Meta, Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-our-values',
   templateUrl: './our-values.component.html',
   styleUrls: ['./our-values.component.scss']
 })
 export class OurValuesComponent {
-  constructor(private scroller: ViewportScroller){}
+  constructor(private scroller: ViewportScroller,private title: Title, private meta: Meta){
+    this.title.setTitle('about us')
+  }
   public   show1 = false;
   public   show2 = false;
   public   show3 = false;

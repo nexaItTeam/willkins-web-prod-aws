@@ -80,7 +80,7 @@ export class ViewImageComponent implements OnInit {
   }
 
   public getPropertyImage() {
-    debugger
+    
     this.spinner.show()
     let body = {
       "prop_id": this.propertyId
@@ -222,7 +222,7 @@ export class ViewImageComponent implements OnInit {
   }
   //et total amount of the property
   getTotalInvestmet() {
-    debugger
+    
     this.spinner.show()
     const body = {
       "prop_id": this.propertyId

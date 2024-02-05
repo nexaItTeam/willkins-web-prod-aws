@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { CommonService } from 'src/app/shared/common.service';
@@ -12,10 +13,10 @@ export class BlogComponent implements OnInit{
 public dataSource:any
 constructor( public spinner:NgxSpinnerService, private _commonService: CommonService, 
   public route:Router){
-
+    
 }
 ngOnInit(): void {
- // this.getBlogList();
+  this.getBlogList();
 }
 //get all blog data
 getBlogList() {
