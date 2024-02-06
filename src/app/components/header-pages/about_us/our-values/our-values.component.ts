@@ -8,7 +8,7 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class OurValuesComponent {
   constructor(private scroller: ViewportScroller,private title: Title, private meta: Meta){
-    this.title.setTitle('about us')
+    this.title.setTitle('Wellkins Capital')
   }
   public   show1 = false;
   public   show2 = false;

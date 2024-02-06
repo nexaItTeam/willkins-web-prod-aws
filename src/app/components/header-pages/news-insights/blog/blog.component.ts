@@ -12,8 +12,8 @@ import { CommonService } from 'src/app/shared/common.service';
 export class BlogComponent implements OnInit{
 public dataSource:any
 constructor( public spinner:NgxSpinnerService, private _commonService: CommonService, 
-  public route:Router){
-    
+  public route:Router,private title: Title){
+    this.title.setTitle("Wellkins Capital")
 }
 ngOnInit(): void {
   this.getBlogList();

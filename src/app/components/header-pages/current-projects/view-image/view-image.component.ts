@@ -6,6 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { CommonService } from 'src/app/shared/common.service';
 import { LabelSettings } from '@progress/kendo-angular-progressbar';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-view-image',
@@ -51,8 +52,9 @@ export class ViewImageComponent implements OnInit {
       Amount: "$500,000 or more ",
     }
   ]
-  constructor(private _fb: FormBuilder, private router: ActivatedRoute, private _commonService: CommonService, public spinner: NgxSpinnerService) {
-
+  constructor(private _fb: FormBuilder, private router: ActivatedRoute, private _commonService: CommonService,
+    public spinner: NgxSpinnerService, private title: Title) {
+    this.title.setTitle('Wellkins Capital')
   }
 
   ngOnInit(): void {
@@ -80,7 +82,7 @@ export class ViewImageComponent implements OnInit {
   }
 
   public getPropertyImage() {
-    
+
     this.spinner.show()
     let body = {
       "prop_id": this.propertyId
@@ -146,47 +148,47 @@ export class ViewImageComponent implements OnInit {
    }
   }  */
   onFormSubmit() {
-  
-   // var toparse = this.propertyInfo[0].facility
-   
-      this.spinner.show()
-      this.isTouch = true
-      if (this.enquiryForm.valid) {
 
-        var body = {
-          "enquery": {
-            "full_name": this.enquiryForm.controls['full_name'].value,
-            "user_email": this.enquiryForm.controls["user_email"].value,
-            "contact_no": this.enquiryForm.controls["contact_no"].value,
-            "location": this.enquiryForm.controls["location"].value,
-            "description": this.enquiryForm.controls["description"].value,
-            "property_id": this.propertyId,
-            "invest": this.enquiryForm.controls["invest"].value,
-            "property_name": this.propertyInfo[0].property_name
+    // var toparse = this.propertyInfo[0].facility
 
-          }
+    this.spinner.show()
+    this.isTouch = true
+    if (this.enquiryForm.valid) {
+
+      var body = {
+        "enquery": {
+          "full_name": this.enquiryForm.controls['full_name'].value,
+          "user_email": this.enquiryForm.controls["user_email"].value,
+          "contact_no": this.enquiryForm.controls["contact_no"].value,
+          "location": this.enquiryForm.controls["location"].value,
+          "description": this.enquiryForm.controls["description"].value,
+          "property_id": this.propertyId,
+          "invest": this.enquiryForm.controls["invest"].value,
+          "property_name": this.propertyInfo[0].property_name
+
         }
-        this._commonService
-          .addEnquiry(body)
-          .subscribe({
-            next: (val: any) => {
-              alert('Thank You for submitting your expression of interest, an invitation will be sent to you soon.If not received, please check your junk mail.');
-              this.spinner.hide()
-              this.isTouch = false
-              this.enquiryForm.reset()
-            },
-            error: (err: any) => {
-
-              alert('Error from server side');
-              this.spinner.hide()
-            },
-          });
-
-      } else {
-        alert("Please fill the form correctly")
-        this.spinner.hide()
-        this.isTouch = true
       }
+      this._commonService
+        .addEnquiry(body)
+        .subscribe({
+          next: (val: any) => {
+            alert('Thank You for submitting your expression of interest, an invitation will be sent to you soon.If not received, please check your junk mail.');
+            this.spinner.hide()
+            this.isTouch = false
+            this.enquiryForm.reset()
+          },
+          error: (err: any) => {
+
+            alert('Error from server side');
+            this.spinner.hide()
+          },
+        });
+
+    } else {
+      alert("Please fill the form correctly")
+      this.spinner.hide()
+      this.isTouch = true
+    }
     // } else {
     //   alert('Booking closed for current project since all Units alloted, you can invest & go through our other projects.THANK YOU');
     // }
@@ -222,7 +224,7 @@ export class ViewImageComponent implements OnInit {
   }
   //et total amount of the property
   getTotalInvestmet() {
-    
+
     this.spinner.show()
     const body = {
       "prop_id": this.propertyId
@@ -231,19 +233,19 @@ export class ViewImageComponent implements OnInit {
       next: (res: any) => {
         this.spinner.hide()
         this.totalInvestment = res.totalInvestment[0].total_investment;
-        const a =this.propertyInfo[0].facility
-        const b =this.totalInvestment 
-        if(b != null){
-        if(this.propertyInfo[0].facility < this.totalInvestment ){
-        this.value = (b/a) * 100
-        console.log("0")
-        }else{
-          this.value = 100
+        const a = this.propertyInfo[0].facility
+        const b = this.totalInvestment
+        if (b != null) {
+          if (this.propertyInfo[0].facility < this.totalInvestment) {
+            this.value = (b / a) * 100
+            console.log("0")
+          } else {
+            this.value = 100
+          }
         }
-      }
-      else{
-        this.value =0
-      }
+        else {
+          this.value = 0
+        }
       },
       error: (err: any) => {
 
