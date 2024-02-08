@@ -1,0 +1,20 @@
+
+
+.projectbanner-section{position: relative;
+    .banner-img{
+        img{height: 387px;width: 100%;position: relative;background-size: cover;background-position: center center;object-fit: cover;}
+    }
+    .container{display: flex;justify-content: center;
+        .banner-heading{position: absolute;top: 50%;text-align: center;
+            h1{text-transform: capitalize;}
+        
+        }
+    }
+}
+
+.projectinfo-section{
+
+    p, li{font-size: 16px;font-weight: 400;line-height: 30px;}
+    strong{display: block;margin-bottom: 10px;}
+    li{margin-bottom: 15px;}
+}
