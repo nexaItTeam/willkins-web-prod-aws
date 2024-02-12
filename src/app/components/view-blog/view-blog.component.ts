@@ -38,7 +38,7 @@ export class ViewBlogComponent {
         this.blogInfo = blogData.filter((element: any) => element.id == this.blogId)
         this.title.setTitle(this.blogInfo[0].page_title);
         this.meta.updateTag(
-          { name: 'Wellkins Capital', content: this.blogInfo[0].pagemeta_desc },
+          { name: 'description', content: this.blogInfo[0].pagemeta_desc },
 
         );
         this.blogInfo = this.sanitizer.bypassSecurityTrustHtml(this.blogInfo[0].blog_desc)
