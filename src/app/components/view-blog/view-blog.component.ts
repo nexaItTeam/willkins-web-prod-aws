@@ -16,15 +16,15 @@ export class ViewBlogComponent {
   public blogId!: number | string | any
   constructor(public sanitizer: DomSanitizer, public spinner: NgxSpinnerService,
     private _commonService: CommonService,
-    private router: ActivatedRoute,private title: Title, private meta: Meta) {
+    private router: ActivatedRoute, private title: Title, private meta: Meta) {
 
     this.router.paramMap.subscribe((params) => {
       this.blogId = params.get('queryParams')
     })
     this.getBlogList()
-    
+
   }
-//get all blog data and sanitize the data to render on html
+  //get all blog data and sanitize the data to render on html
   getBlogList() {
 
     var blogData
@@ -37,12 +37,12 @@ export class ViewBlogComponent {
 
         this.blogInfo = blogData.filter((element: any) => element.id == this.blogId)
         this.title.setTitle(this.blogInfo[0].page_title);
-        this.meta.addTags([
-          {name: this.blogInfo[0].pagemeta_name, content: this.blogInfo[0].pagemeta_desc},
-         
-        ]);
+        this.meta.updateTag(
+          { name: 'Wellkins Capital', content: this.blogInfo[0].pagemeta_desc },
+
+        );
         this.blogInfo = this.sanitizer.bypassSecurityTrustHtml(this.blogInfo[0].blog_desc)
-       
+
         this.spinner.hide()
       },
       error: (err: any) => {

@@ -9,10 +9,10 @@ import { Meta, Title } from '@angular/platform-browser';
 export class OurValuesComponent {
   constructor(private scroller: ViewportScroller,private title: Title, private meta: Meta){
     this.title.setTitle('Licensed Australian Retail Investor Fund Manager - Wellkins Capital');
-    this.meta.addTags([
-      {name: 'Licensed Australian Retail Investor Fund Manager - Wellkins Capital'
+    this.meta.updateTag(
+      {name: 'Wellkins Capital'
       , content:"Australia's dynamic and innovative investment company with 30 to 40 years of experience in banking, fund management, and investment management." },  
-    ]);
+    );
   }
   public   show1 = false;
   public   show2 = false;
