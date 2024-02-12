@@ -8,8 +8,11 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class HomeComponent implements OnInit{
 constructor(private title: Title, private meta: Meta){
-  this.title.setTitle('Wellkins Capital');
-  //alert("Site will be under scheduled Maintenance from 20-Aug-2023 (16:00 AEST) to 22-Aug-2023 (20:00 AEST) ")
+  this.title.setTitle('Asset Management Company For Quality Investments: Wellkins Capital');
+  this.meta.addTags([
+    {name: 'Asset Management Company For Quality Investments: Wellkins Capital'
+    , content:'Ready to secure your financial future? Partner with our registered Asset management Company for premium returns and adjusted risks. Invest Now!' },  
+  ]);
 }
 ngOnInit(): void {
   
