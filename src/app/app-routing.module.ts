@@ -36,7 +36,7 @@ const routes = [
     
     { path: 'invest-faq', component: InvestFAQComponent , text: 'FAQs' },
     { path: 'invest-portal', component: InvestPortalComponent , text: 'Investment Portal' },
-    { path: 'invest-process', component: InvestProcessComponent , text: 'Why Invest With Us' },
+    { path: 'Why-Invest-With-Us', component: InvestProcessComponent , text: 'Why Invest With Us' },
 ]  
 },
   

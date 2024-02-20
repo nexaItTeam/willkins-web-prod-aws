@@ -68,12 +68,12 @@ export class ViewImageComponent implements OnInit {
       "property_id": ["",],
       "invest": ['', Validators.required]
     });
-
-    this.router.paramMap.subscribe((params) => {
-
-
-      this.propertyId = params.get('queryParams')
-    })
+    this.router.queryParams.subscribe(params => {
+      const projectName = decodeURIComponent(params['projectName']);
+      this.propertyId = params['id'];
+      // Use projectName and id as needed
+    });
+   
     //  console.log(this.data)
     this.getPropertyLists();
     this.getPropertyImage();
