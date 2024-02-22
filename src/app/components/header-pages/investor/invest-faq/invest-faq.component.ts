@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 
 @Component({
@@ -10,7 +11,13 @@ import { Component, OnInit } from '@angular/core';
 export class InvestFAQComponent implements OnInit{
 
   panelOpenState = false;
-  constructor(){}
+  constructor(private title: Title, private meta: Meta){
+    this.title.setTitle('Answers to Your Frequently Asked Questions');
+    this.meta.updateTag({
+      name: 'description'
+      , content:'Find answers to common queries on our FAQ page. Get clarity on our services, investments, and more. Simplify your decision-making process today!' ,  
+  });
+  }
   ngOnInit(): void {
     
   }

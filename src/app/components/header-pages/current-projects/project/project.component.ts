@@ -6,7 +6,8 @@ import { AppPreference } from "../../../../shared/app-preference";
 import { ViewImageComponent } from '../view-image/view-image.component';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Router } from '@angular/router';
-import { Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
+import { CanonicalService } from 'src/app/shared/canonical.service';
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
@@ -24,9 +25,18 @@ export class ProjectComponent implements OnInit {
     private _commonService: CommonService,
     public spinner: NgxSpinnerService,
     public route: Router,
-    private title: Title
+    private title: Title,
+    private canonicalService:CanonicalService,
+    private meta: Meta
   ) {
-    this.title.setTitle('Wellkins Capital');
+    this.title.setTitle('Dive Into Our Latest Projects - Your Next Investment Opportunity!');
+    this.meta.updateTag(
+      {
+        name: 'description'
+        , content: "Explore our current projects and seize the chance to invest in a promising opportunity. Discover why this project is worth your attention."
+      },
+    );
+    this.canonicalService.createCanonicalURL()
   }
 
 

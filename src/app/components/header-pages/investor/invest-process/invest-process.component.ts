@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
+import { CanonicalService } from 'src/app/shared/canonical.service';
 
 @Component({
   selector: 'app-invest-process',
@@ -11,4 +13,12 @@ export class InvestProcessComponent {
   active = 1;
   active1 = 1;
   active2 = 1;
+  constructor(private title: Title, private meta: Meta,private canonicalService:CanonicalService){
+    this.title.setTitle('Discover the Benefits of Investing with Wellkins Capital');
+    this.meta.updateTag({
+      name: 'description'
+      , content:'Explore our current projects and seize the chance to invest in a promising opportunity. Discover why this project is worth your attention.' ,  
+  });
+  this.canonicalService.createCanonicalURL()
+  }
 }
