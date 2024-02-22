@@ -7,6 +7,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 import { CommonService } from 'src/app/shared/common.service';
 import { LabelSettings } from '@progress/kendo-angular-progressbar';
 import { Title } from '@angular/platform-browser';
+import { CanonicalService } from 'src/app/shared/canonical.service';
 
 @Component({
   selector: 'app-view-image',
@@ -53,8 +54,9 @@ export class ViewImageComponent implements OnInit {
     }
   ]
   constructor(private _fb: FormBuilder, private router: ActivatedRoute, private _commonService: CommonService,
-    public spinner: NgxSpinnerService, private title: Title) {
+    public spinner: NgxSpinnerService, private title: Title,private canonicalService:CanonicalService) {
     this.title.setTitle('Wellkins Capital')
+    this.canonicalService.createCanonicalURL()
   }
 
   ngOnInit(): void {
@@ -224,7 +226,7 @@ export class ViewImageComponent implements OnInit {
   }
   //et total amount of the property
   getTotalInvestmet() {
-
+debugger
     this.spinner.show()
     const body = {
       "prop_id": this.propertyId
@@ -236,9 +238,9 @@ export class ViewImageComponent implements OnInit {
         const a = this.propertyInfo[0].facility
         const b = this.totalInvestment
         if (b != null) {
-          if (this.propertyInfo[0].facility < this.totalInvestment) {
+          if (this.propertyInfo[0].facility >= this.totalInvestment) {
             this.value = (b / a) * 100
-            console.log("0")
+           
           } else {
             this.value = 100
           }
