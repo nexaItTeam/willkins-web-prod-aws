@@ -80,7 +80,7 @@ export class ViewImageComponent implements OnInit {
     this.getPropertyLists();
     this.getPropertyImage();
     //this.showStaticImg(this.data)
-    this.getTotalInvestmet();
+   // this.getTotalInvestmet();
   }
 
   public getPropertyImage() {
@@ -181,7 +181,7 @@ export class ViewImageComponent implements OnInit {
           },
           error: (err: any) => {
 
-            alert('Error from server side');
+            alert(err?.error?.message);
             this.spinner.hide()
           },
         });
@@ -226,7 +226,7 @@ export class ViewImageComponent implements OnInit {
   }
   //et total amount of the property
   getTotalInvestmet() {
-debugger
+
     this.spinner.show()
     const body = {
       "prop_id": this.propertyId

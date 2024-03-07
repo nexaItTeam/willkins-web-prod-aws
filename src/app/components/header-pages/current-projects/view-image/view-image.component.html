@@ -18,11 +18,11 @@
     <div class="row justify-content-center">
       <div class="col-xl-12">
         <div class="section-title style1 text-center mb-40">
-          <h2> {{propertyInfo[0].property_name}}</h2>
-          <h4 class="my-3 text-center">{{propertyInfo[0].property_address}}</h4>
+          <h2> {{propertyInfo[0]?.property_name}}</h2>
+          <h4 class="my-3 text-center">{{propertyInfo[0]?.property_address}}</h4>
         </div>
         <div class="text-center">
-          <p style="text-align: center; color:#385548;font-size: 16px;">{{propertyInfo[0].desc}}
+          <p style="text-align: center; color:#385548;font-size: 16px;">{{propertyInfo[0]?.desc}}
           </p>
 
         </div>
@@ -59,7 +59,7 @@
   </div>
 
 </section>
-<div *ngIf='propertyInfo[0].prop_type == 3' class="container col-xl-4">
+<div *ngIf= false class="container col-xl-4">
   
   <kendo-progressbar [value]="value" [label]="label"></kendo-progressbar>
   
